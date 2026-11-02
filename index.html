@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A personal portfolio demonstrating jQuery selectors, effects, DOM manipulation and animations.">
+  <title>My Portfolio | jQuery Assignment #6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span> MY PORTFOLIO</a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#gallery">Gallery</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="lightTheme" class="theme-btn" type="button" aria-label="Light theme">☀</button>
+      <button id="darkTheme" class="theme-btn" type="button" aria-label="Dark theme">☾</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> FRONT-END DEVELOPER IN PROGRESS</p>
+        <h1 id="mainHeadline">Hello, I'm <span class="accent">Zhumadilla Saniya.</span><br>Building for the web.</h1>
+        <p class="hero-intro">I’m a curious student passionate about technology, creative problem-solving, and turning ideas into useful digital experiences.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#skills">Explore my skills <span>↗</span></a>
+          <button id="changeGreeting" class="button button-secondary" type="button">Change greeting</button>
+        </div>
+        <p class="hero-note">Assignment #6 · jQuery practice portfolio</p>
+      </div>
+      <div class="hero-art" aria-label="Decorative portfolio illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card">
+          <div class="window-top"><i></i><i></i><i></i><span>portfolio.js</span></div>
+          <div class="code-lines">
+            <p><span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
+            <p class="indent"><span class="code-green">curiosity</span>: <b>true</b>,</p>
+            <p class="indent"><span class="code-green">ideas</span>: <span class="code-yellow">"many"</span>,</p>
+            <p class="indent"><span class="code-green">learning</span>: <span class="code-yellow">"always"</span></p>
+            <p>};</p>
+            <p class="code-comment">// the journey starts here ✨</p>
+          </div>
+        </div>
+        <div class="floating-chip chip-one">HTML · CSS</div><div class="floating-chip chip-two">jQuery</div>
+        <div class="sparkle sparkle-one">✳</div><div class="sparkle sparkle-two">✦</div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading"><p class="eyebrow">01 / A LITTLE INTRODUCTION</p><h2>About <span class="accent">me</span></h2></div>
+      <div class="about-grid">
+        <article class="about-card">
+          <div class="avatar">YN</div>
+          <div><h3>Zhumadilla Saniya</h3><p class="muted">IT-2503 · Future Front-End Developer</p></div>
+          <p class="bio">I enjoy learning how websites work, experimenting with design, and building projects that make technology feel simple and accessible. Every project is a chance to learn something new.</p>
+          <div class="status-box" id="statusMessage"><span class="status-dot"></span> Currently learning jQuery!</div>
+          <div class="button-row">
+            <button class="button button-small" id="hideStatus" type="button">Hide</button>
+            <button class="button button-small" id="showStatus" type="button">Show</button>
+            <button class="button button-small button-outline" id="toggleStatus" type="button">Toggle</button>
+          </div>
+        </article>
+        <article class="facts-card">
+          <p class="eyebrow">A FEW FUN FACTS</p>
+          <h3>Things that make me, me.</h3>
+          <ul class="fact-list" id="funFacts">
+            <li><span>01</span> I love discovering new technologies.</li>
+            <li><span>02</span> I enjoy music while I work.</li>
+            <li><span>03</span> My goal is to build useful, beautiful websites.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading"><p class="eyebrow">02 / VISUAL INSPIRATION</p><h2>My little <span class="accent">gallery</span></h2><p class="section-description">Use the controls to explore the gallery with jQuery fade effects.</p></div>
+      <div class="gallery-grid" id="galleryImages">
+        <figure class="gallery-item">
+          <img src="assets/saniya-celebration.jpg" alt="Saniya at a special celebration">
+          <figcaption><span>01</span> A special celebration</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/saniya-rest-time.jpg" alt="Saniya enjoying a moment of rest">
+          <figcaption><span>02</span> A moment of rest</figcaption>
+        </figure>
+      </div>
+      <div class="button-row center">
+        <button class="button button-small" id="fadeIn" type="button">Fade In</button>
+        <button class="button button-small" id="fadeOut" type="button">Fade Out</button>
+        <button class="button button-small button-outline" id="fadeToggle" type="button">Fade Toggle</button>
+      </div>
+    </section>
+
+    <section class="section favorites-section" id="favorites">
+      <div class="section-heading"><p class="eyebrow">03 / QUICK FACTS</p><h2>My <span class="accent">favorites</span></h2><p class="section-description">Click each heading to reveal or collapse its content.</p></div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-heading" type="button" aria-expanded="false"><span><b>01</b> My Favorite Music</span><span class="plus">+</span></button>
+          <div class="accordion-panel"><p>I enjoy listening to different genres while studying or coding. Music helps me focus, stay motivated, and make long tasks more enjoyable.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-heading" type="button" aria-expanded="false"><span><b>02</b> My Favorite Movie</span><span class="plus">+</span></button>
+          <div class="accordion-panel"><p>I like movies with memorable characters, creative storytelling, and ideas that stay with me long after the credits.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-heading" type="button" aria-expanded="false"><span><b>03</b> My Favorite Subject</span><span class="plus">+</span></button>
+          <div class="accordion-panel"><p>Web development is one of my favorite subjects because it combines logic, creativity, and practical results that I can share with others.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading"><p class="eyebrow">04 / WHAT I'M LEARNING</p><h2>My technical <span class="accent">skills</span></h2><p class="section-description">Add skills to the list, then animate the skill bars below.</p></div>
+      <div class="skills-layout">
+        <article class="skill-list-card">
+          <h3>Skill toolbox</h3>
+          <ul id="skillList" class="skill-list">
+            <li><span>HTML5</span><span class="skill-tag">Markup</span></li>
+            <li><span>CSS3</span><span class="skill-tag">Styling</span></li>
+            <li><span>JavaScript</span><span class="skill-tag">Programming</span></li>
+            <li><span>jQuery</span><span class="skill-tag">Library</span></li>
+          </ul>
+          <div class="add-skill-form"><label for="newSkill">Add another skill</label><input id="newSkill" type="text" placeholder="e.g. React"><div class="button-row"><button class="button button-small" id="addSkill" type="button">Add Skill</button><button class="button button-small" id="prependSkill" type="button">Prepend Skill</button><button class="button button-small button-outline" id="removeSkill" type="button">Remove Skill</button></div><p class="input-feedback" id="skillFeedback" aria-live="polite"></p></div>
+        </article>
+        <article class="bars-card">
+          <div class="bars-header"><h3>My progress</h3><span class="skill-tag">Illustrative levels</span></div>
+          <div class="skill-bar-row"><div class="bar-label"><span>HTML & CSS</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-width="90%"></div></div></div>
+          <div class="skill-bar-row"><div class="bar-label"><span>JavaScript</span><span>75%</span></div><div class="bar-track"><div class="bar-fill" data-width="75%"></div></div></div>
+          <div class="skill-bar-row"><div class="bar-label"><span>jQuery</span><span>65%</span></div><div class="bar-track"><div class="bar-fill" data-width="65%"></div></div></div>
+          <button class="button button-primary" id="animateSkills" type="button">Animate My Skills <span>↗</span></button>
+          <p class="muted small">Click again to reset the bars to zero.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading"><p class="eyebrow">05 / LET'S CONNECT</p><h2>Get in <span class="accent">touch</span></h2></div>
+      <div class="contact-grid">
+        <article class="contact-card">
+          <h3>Find me online</h3><p class="muted">Here is a social link. Use the button to change its destination with jQuery .attr().</p>
+          <a id="socialLink" href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit my GitHub ↗</a>
+          <button id="changeLink" class="button button-small" type="button">Change link destination</button>
+          <p class="input-feedback" id="linkFeedback" aria-live="polite"></p>
+        </article>
+        <article class="contact-card">
+          <h3>Live form preview</h3><p class="muted">Type your details and see the preview update instantly.</p>
+          <form id="contactForm">
+            <label for="visitorName">Name</label><input id="visitorName" type="text" placeholder="Your name">
+            <label for="visitorEmail">Email</label><input id="visitorEmail" type="email" placeholder="you@example.com">
+          </form>
+          <div class="live-preview" aria-live="polite"><p><span>Name:</span> <strong id="namePreview">—</strong></p><p><span>Email:</span> <strong id="emailPreview">—</strong></p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">✦</span> MY PORTFOLIO</a><p>Built with HTML, CSS, JavaScript & jQuery · Assignment #6</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+</body>
+</html>
