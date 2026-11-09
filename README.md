@@ -7,12 +7,6 @@
 ## Project
 A responsive personal portfolio demonstrating jQuery selectors, effects, DOM manipulation, form interaction, and animations.
 
-## How to run
-1. Download or clone this repository.
-2. Open `index.html` in a browser. An internet connection is required to load jQuery from the CDN and the remote gallery photos.
-3. Open browser Developer Tools → Console and confirm the message: `jQuery is ready!`.
-
-## Assignment tasks
 
 ### Task 0 — Setup
 - jQuery 3.7.1 is included from the official jQuery CDN.
@@ -72,16 +66,6 @@ Add your own browser screenshots in the `screenshots/` folder. The assignment re
 
 ## Work summary
 I created a responsive personal portfolio using HTML, CSS, JavaScript, and jQuery. I connected the jQuery CDN and initialized the code when the document was ready. I practiced selectors and CSS changes, implemented visibility, fade, and slide effects, manipulated DOM elements and attributes, created a live form preview, and animated skill bars. I tested the interactions in the browser and organized the source code into separate files.
-
-## Before submitting
-- [ ] Check that your name and group are displayed correctly in the page and this README.
-- [ ] Personalize the biography and examples so they accurately describe you.
-- [ ] Test all buttons and form interactions in your browser.
-- [ ] Capture and add the required screenshots to `screenshots/` and embed them under the matching task sections.
-- [ ] Push the complete project to a **public** GitHub repository.
-- [ ] Enable GitHub Pages (Settings → Pages → deploy from `main` branch, `/ (root)`).
-- [ ] Submit both the GitHub repository URL and GitHub Pages URL on Moodle.
-- [ ] Be ready to explain the jQuery methods during the mandatory defence.
 
 
 ## Gallery photos
